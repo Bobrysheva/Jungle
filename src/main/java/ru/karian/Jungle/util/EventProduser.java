@@ -34,7 +34,6 @@ public class EventProduser {
             }
         }
         System.out.println("Лев скончался!!! Game over :(");
-
     }
 
     private void sleepEvent(Lion lion) {
@@ -84,7 +83,6 @@ public class EventProduser {
         lion.setHp(health);
         Lion.checkEnergy(lion);
         Lion.checkHp(lion);
-
     }
 
     private void rainingEvent(Lion lion) {
@@ -96,7 +94,6 @@ public class EventProduser {
         lion.setHp(health);
         Lion.checkEnergy(lion);
         Lion.checkHp(lion);
-
     }
 
     private void justMove(Lion lion) {
