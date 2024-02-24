@@ -10,21 +10,21 @@ public class EventProduser {
                 sleepEvent(lion);
             } else if (eventNumber >= 10 && eventNumber < 20) {
                 drinkEvent(lion);
-            } else if (eventNumber >= 20 && eventNumber < 30) {
+            } else if (eventNumber >= 20 && eventNumber < 35) {
                 conflictEvent(lion);
-            } else if (eventNumber >= 30 && eventNumber < 40) {
+            } else if (eventNumber >= 35 && eventNumber < 40) {
                 playEvent(lion);
-            } else if (eventNumber >= 40 && eventNumber < 50) {
+            } else if (eventNumber >= 40 && eventNumber < 45) {
                 eatHyenaEvent(lion);
-            } else if (eventNumber >= 50 && eventNumber < 60) {
+            } else if (eventNumber >= 45 && eventNumber < 50) {
                 rainingEvent(lion);
-            } else if (eventNumber >= 60 && eventNumber < 70) {
+            } else if (eventNumber >= 50 && eventNumber < 70) {
                 justMove(lion);
-            } else if (eventNumber >= 70 && eventNumber < 90) {
+            } else if (eventNumber >= 70 && eventNumber < 80) {
                 lionEatGazelle(lion);
-            } else if (eventNumber >= 80 && eventNumber < 90) {
+            } else if (eventNumber >= 80 && eventNumber < 85) {
                 lionEatElephant(lion);
-            } else if (eventNumber >= 90 && eventNumber < 100) {
+            } else if (eventNumber >= 85 && eventNumber < 100) {
                 meetHunter(lion);
             }
             try {
@@ -50,7 +50,7 @@ public class EventProduser {
         System.out.println("Лев вдоволь напился!");
         int energy = lion.getEnergy() + 5;
         int health = lion.getHp();
-        health = health + 5;
+        health = health + 2;
         lion.setEnergy(energy);
         lion.setHp(health);
         Lion.checkEnergy(lion);
@@ -59,9 +59,9 @@ public class EventProduser {
 
     private void conflictEvent(Lion lion) {
         System.out.println("Лев защищал территорию");
-        int energy = lion.getEnergy() - 20;
+        int energy = lion.getEnergy() - 80;
         int health = lion.getHp();
-        health = health - 5;
+        health = health - 20;
         lion.setEnergy(energy);
         lion.setHp(health);
         Lion.checkEnergy(lion);
@@ -71,12 +71,8 @@ public class EventProduser {
     private void playEvent(Lion lion) {
         System.out.println("Лев поиграл и в отличном настроении!");
         int energy = lion.getEnergy() + 5;
-        int health = lion.getHp();
-        health = health + 5;
         lion.setEnergy(energy);
-        lion.setHp(health);
         Lion.checkEnergy(lion);
-        Lion.checkHp(lion);
     }
 
     private void eatHyenaEvent(Lion lion) {
@@ -95,7 +91,7 @@ public class EventProduser {
         System.out.println("Лев бегал под дождем");
         int energy = lion.getEnergy() - 5;
         int health = lion.getHp();
-        health = health - 2;
+        health = health - 5;
         lion.setEnergy(energy);
         lion.setHp(health);
         Lion.checkEnergy(lion);
@@ -139,7 +135,7 @@ public class EventProduser {
         System.out.println("Лев бегает от охотника!!!");
         int energy = lion.getEnergy() - 40;
         int health = lion.getHp();
-        health = health - 10;
+        health = health - 20;
         lion.setEnergy(energy);
         lion.setHp(health);
         Lion.checkEnergy(lion);

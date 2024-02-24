@@ -24,6 +24,7 @@ public class Lion {
     public double getFangs() {
         return FANGS;
     }
+
     public static void checkEnergy(Lion lion) {
         int energy = lion.getEnergy();
         int health = lion.getHp();

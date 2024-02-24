@@ -8,7 +8,5 @@ public class Main {
         Lion lion = new Lion();
         EventProduser ep1 = new EventProduser();
         ep1.startSimulatin(lion);
-
-
     }
 }
