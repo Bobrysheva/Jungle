@@ -1,9 +1,9 @@
 package ru.karian.Jungle.model;
 
 public class Lion {
-    private int hp = 100; // = 100
-    private int energy = 100; //  = 100
-    private final double FANGS = 2.5; // *hp
+    private int hp = 100;
+    private int energy = 100;
+    private final double FANGS = 2.5;
 
     public int getHp() {
         return hp;
@@ -51,4 +51,12 @@ public class Lion {
         lion.setHp(health);
     }
 
+    public static boolean checkStatus(Lion lion) {
+        System.out.println("Проверка статуса. У царя зверей " + lion.getHp() + " здоровья и " + lion.getEnergy() + " энергии");
+        if (lion.getHp() <= 0) {
+            return false;
+        } else {
+            return true;
+        }
+    }
 }

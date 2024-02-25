@@ -4,7 +4,7 @@ import ru.karian.Jungle.model.Lion;
 
 public class EventProduser {
     public void startSimulatin(Lion lion) {
-        while (checkStatus(lion)) {
+        while (Lion.checkStatus(lion)) {
             int eventNumber = (int) (Math.random() * 100);
             if (eventNumber >= 0 && eventNumber < 10) {
                 sleepEvent(lion);
@@ -137,29 +137,5 @@ public class EventProduser {
         lion.setHp(health);
         Lion.checkEnergy(lion);
         Lion.checkHp(lion);
-    }
-
-    public void checkEnergy(Lion lion) {
-        int energy = lion.getEnergy();
-        int health = lion.getHp();
-        if (energy < 0) {
-            energy = 0;
-            health = health - 5;
-            System.out.println("Энергия льва окончательно истощилась! Текущая энергия: " + energy);
-        } else if (energy > 100) {
-            energy = 100;
-            System.out.println("Лев полон сил и энергии! Текущая энергия: " + energy);
-        }
-        lion.setEnergy(energy);
-        lion.setHp(health);
-    }
-
-    private boolean checkStatus(Lion lion) {
-        System.out.println("Проверка статуса. У царя зверей " + lion.getHp() + " здоровья и " + lion.getEnergy() + " энергии");
-        if (lion.getHp() <= 0) {
-            return false;
-        } else {
-            return true;
-        }
     }
 }
