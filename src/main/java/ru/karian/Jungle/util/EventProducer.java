@@ -2,9 +2,9 @@ package ru.karian.Jungle.util;
 
 import ru.karian.Jungle.model.Lion;
 
-public class EventProduser {
+public class EventProducer {
     public void startSimulatin(Lion lion) {
-        while (Lion.checkStatus(lion)) {
+        while (CheckService.checkStatus(lion)) {
             int eventNumber = (int) (Math.random() * 100);
             if (eventNumber >= 0 && eventNumber < 10) {
                 sleepEvent(lion);
@@ -42,7 +42,7 @@ public class EventProduser {
         int health = lion.getHp();
         lion.setEnergy(energy);
         lion.setHp(health);
-        Lion.checkEnergy(lion);
+        CheckService.checkEnergy(lion);
     }
 
     private void drinkEvent(Lion lion) {
@@ -52,8 +52,8 @@ public class EventProduser {
         health = health + 2;
         lion.setEnergy(energy);
         lion.setHp(health);
-        Lion.checkEnergy(lion);
-        Lion.checkHp(lion);
+        CheckService.checkEnergy(lion);
+        CheckService.checkHp(lion);
     }
 
     private void conflictEvent(Lion lion) {
@@ -63,15 +63,15 @@ public class EventProduser {
         health = health - 20;
         lion.setEnergy(energy);
         lion.setHp(health);
-        Lion.checkEnergy(lion);
-        Lion.checkHp(lion);
+        CheckService.checkEnergy(lion);
+        CheckService.checkHp(lion);
     }
 
     private void playEvent(Lion lion) {
         System.out.println("Лев поиграл и в отличном настроении!");
         int energy = lion.getEnergy() + 5;
         lion.setEnergy(energy);
-        Lion.checkEnergy(lion);
+        CheckService.checkEnergy(lion);
     }
 
     private void eatHyenaEvent(Lion lion) {
@@ -81,8 +81,8 @@ public class EventProduser {
         health = health + (int) (12 * lion.getFangs());
         lion.setEnergy(energy);
         lion.setHp(health);
-        Lion.checkEnergy(lion);
-        Lion.checkHp(lion);
+        CheckService.checkEnergy(lion);
+        CheckService.checkHp(lion);
     }
 
     private void rainingEvent(Lion lion) {
@@ -92,8 +92,8 @@ public class EventProduser {
         health = health - 5;
         lion.setEnergy(energy);
         lion.setHp(health);
-        Lion.checkEnergy(lion);
-        Lion.checkHp(lion);
+        CheckService.checkEnergy(lion);
+        CheckService.checkHp(lion);
     }
 
     private void justMove(Lion lion) {
@@ -103,7 +103,7 @@ public class EventProduser {
         int health = lion.getHp();
         lion.setEnergy(energy);
         lion.setHp(health);
-        Lion.checkEnergy(lion);
+        CheckService.checkEnergy(lion);
     }
 
     private void lionEatGazelle(Lion lion) {
@@ -113,8 +113,8 @@ public class EventProduser {
         health = health + (int) (10 * lion.getFangs());
         lion.setEnergy(energy);
         lion.setHp(health);
-        Lion.checkEnergy(lion);
-        Lion.checkHp(lion);
+        CheckService.checkEnergy(lion);
+        CheckService.checkHp(lion);
     }
 
     private void lionEatElephant(Lion lion) {
@@ -124,8 +124,8 @@ public class EventProduser {
         health = health + (int) (20 * lion.getFangs());
         lion.setEnergy(energy);
         lion.setHp(health);
-        Lion.checkEnergy(lion);
-        Lion.checkHp(lion);
+        CheckService.checkEnergy(lion);
+        CheckService.checkHp(lion);
     }
 
     private void meetHunter(Lion lion) {
@@ -135,7 +135,7 @@ public class EventProduser {
         health = health - 20;
         lion.setEnergy(energy);
         lion.setHp(health);
-        Lion.checkEnergy(lion);
-        Lion.checkHp(lion);
+        CheckService.checkEnergy(lion);
+        CheckService.checkHp(lion);
     }
 }
