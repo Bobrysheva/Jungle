@@ -30,9 +30,6 @@ public class CheckService {
 
     public static boolean checkStatus(Lion lion) {
         System.out.println("Проверка статуса. У царя зверей " + lion.getHp() + " здоровья и " + lion.getEnergy() + " энергии");
-        while (lion.getHp() > 0) {
-            return true;
-        }
-        return false;
+        return true ? lion.getHp() > 0 : false;
     }
 }
